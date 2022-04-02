@@ -12,8 +12,7 @@ class Solution {
         if(memo[n] != 0) 
             return memo[n];
             
-        int ans = 0;
-        ans += csMemo(n - 1, memo);
+        int ans = csMemo(n - 1, memo);
         
         if(n - 2 >= 0) 
             ans += csMemo(n - 2, memo);
