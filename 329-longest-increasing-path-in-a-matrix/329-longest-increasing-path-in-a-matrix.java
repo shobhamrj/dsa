@@ -1,9 +1,15 @@
 class Solution {
+    
     public int longestIncreasingPath(int[][] mat) {
         int n = mat.length;
         int m = mat[0].length;
         int[][] inDegree = new int[n][m];
-        int[][] dirs = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
+        int[][] dirs = {
+            {0, 1}, 
+            {0, -1}, 
+            {1, 0}, 
+            {-1, 0}
+        };
         
         for(int i = 0; i < n; i++) {
             for(int j = 0; j < m; j++) {
@@ -45,6 +51,6 @@ class Solution {
             }
             level++;
         }
-    return level;
+        return level;
     }
 }
